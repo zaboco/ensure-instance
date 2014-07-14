@@ -16,9 +16,6 @@ function MultiArgsConstructor(def, custom) {
 suite('ensure-instance', function() {
 	suite('simple constructor', function() {
 		var ensureSimpleInstance = ensureInstance(SimpleConstructor);
-		test('throws Error if no arg provided', function() {
-			ensureSimpleInstance.should.throw(Error, /at least one arg/);
-		});
 		test('returns the object itself if already an instance', function() {
 			var obj = new SimpleConstructor();
 			ensureSimpleInstance(obj).should.equal(obj);
@@ -28,6 +25,11 @@ suite('ensure-instance', function() {
 			var instance = ensureSimpleInstance(obj);
 			instance.should.be.instanceOf(SimpleConstructor);
 			instance.def.should.eql(obj);
+		});
+		test.only('assumes empty object if no arg provided', function() {
+			var instance = ensureSimpleInstance();
+			instance.should.be.instanceOf(SimpleConstructor);
+			instance.def.should.eql({});
 		});
 		test('throws Error if arg is not an object', function() {
 			var notAnObject = 1;
