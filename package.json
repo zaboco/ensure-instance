@@ -1,0 +1,31 @@
+{
+  "name": "ensure-instance",
+  "version": "0.1.0",
+  "description": "Ensures an object is instance of a class, or constructs one if not",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --ui tdd test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:zaboco/ensure-instance.git"
+  },
+  "keywords": [
+    "ensure",
+    "instance",
+    "constructor"
+  ],
+  "author": "Bogdan Zaharia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zaboco/ensure-instance/issues"
+  },
+  "homepage": "https://github.com/zaboco/ensure-instance",
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "mocha": "^1.20.1"
+  },
+  "dependencies": {
+    "obj-generator": "^0.1.0"
+  }
+}
