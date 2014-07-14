@@ -1,6 +1,6 @@
 {
   "name": "ensure-instance",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Ensures an object is instance of a class, or constructs one if not",
   "main": "index.js",
   "scripts": {
